@@ -38,6 +38,9 @@
 		<module>fnwtv-user-web</module>
 		<module>fnwtv-user-api</module>
 		<module>fnwtv-user-service</module>
+		<module>fnwtv-all-api</module>
+		<module>fnwtv-all-service</module>
+		<module>fnwtv-all-web</module>
 	</modules>
 
 	<properties>
