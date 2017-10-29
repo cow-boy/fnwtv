@@ -1,10 +1,11 @@
-package com.tv.model;/**
+package com.api.model;/**
  * Created by HUXU on 2017/10/29.
  */
 
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * 直播线路
@@ -22,5 +23,9 @@ public class LiveLine implements Serializable{
     private Integer pid;
 
     private String line;
+
+    private Date lineTime;
+
+    private Short sort;
 
 }

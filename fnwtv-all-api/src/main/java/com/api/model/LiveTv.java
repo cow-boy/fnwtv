@@ -1,4 +1,4 @@
-package com.tv.model;/**
+package com.api.model;/**
  * Created by HUXU on 2017/10/29.
  */
 
@@ -62,5 +62,10 @@ public class LiveTv implements Serializable{
      * 直播线路
      */
     private List<LiveLine> liveLines;
+
+    /**
+     * 电视视频排序
+     */
+    private Integer sort;
 
 }

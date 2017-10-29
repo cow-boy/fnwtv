@@ -2,9 +2,12 @@ package com.tv.service;/**
  * Created by HUXU on 2017/10/29.
  */
 
+
+import com.api.model.LiveLine;
+import com.api.model.LiveTv;
+import com.api.provider.LiveTvProvider;
 import com.tv.dao.LiveTvDao;
-import com.tv.model.LiveTv;
-import com.tv.provider.LiveTvProvider;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,6 +29,10 @@ public class LiveTvProviderImpl implements LiveTvProvider {
     public String selLiveTvList(Short liveType, Short isHot) {
 
         List<LiveTv> ltv = liveTvDao.selLiveTvList(liveType, isHot);
+        for (LiveTv lt: ltv) {
+            List<LiveLine> lines = liveTvDao.selLiveLine(lt.getId());
+            lt.setLiveLines(lines);
+        }
         System.out.println(ltv);
         return null;
     }
