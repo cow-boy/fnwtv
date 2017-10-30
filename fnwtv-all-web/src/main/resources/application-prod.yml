@@ -1,0 +1,27 @@
+server:
+    port: 8080
+#单数据源
+spring:
+  #redis
+  redis:
+    database: 0
+    host: 39.108.
+    port: 6379
+    password: Java2018
+    pool:
+      max-active: 8
+    timeout: 0
+  session:
+    store-type: none
+  ## Dubbo 服务提供者配置
+  dubbo:
+    application:
+      name: consumer
+    registry:
+      address: zookeeper://39.108.:2181
+    consumer:
+      timeout: 1000
+      check: true
+      retries: 2
+    base-package: com.tv.service
+
